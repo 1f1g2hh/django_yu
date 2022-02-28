@@ -1,0 +1,20 @@
+{%extends 'base.html'%}
+{%block anycon%}
+    <div class="container mt-5 mb-5 text-center" style="width:60%">
+        <h1><b>로그인</b></h1>
+        <form method="post">
+            {%csrf_token%}
+            <div class="mt-5" >
+                <input type="text" name="uname"class="form-control" placeholder="Input username" style="font-weight:bold;">
+                <input type="password" name="upass"class="form-control mt-3" placeholder="Input password" style="font-weight:bold;">
+            <div class="text-end mt-4">
+                <button class="btn btn-dark">Login</button>
+            </div>    
+        </form>
+
+        </div>
+
+
+    </div>
+
+{%endblock%}

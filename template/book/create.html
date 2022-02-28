@@ -1,0 +1,23 @@
+{%extends 'base.html'%}
+
+{%block con%}
+
+<div class="container mt-5 mb-5" style="width:80%;">
+    <h1><b>북마크 생성</b></h1>
+    <form method="post">
+        {%csrf_token%}
+        <div class="text-end">
+            <input type="checkbox" class="btn-check" name="impo"id="btncheck2" autocomplete="off">
+            <label class="btn btn-outline-warning" for="btncheck2">✨</label>
+        </div>
+
+        <input type="text" name="sname"class="form-control mt-3" placeholder="사이트이름을 입력하세요">
+        <input type="text" name="surl"class="form-control mt-3" placeholder="사이트URL을 입력하세요">
+        <textarea  name="scon" class="form-control mt-3" placeholder="사이트 설명 간략히~"></textarea>
+        <div class="text-end">
+            <button class="btn btn-dark mt-4">생성하기</button>
+        </div>
+    </form>
+</div>
+
+{%endblock%}
